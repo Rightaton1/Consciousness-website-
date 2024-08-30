@@ -1,0 +1,167 @@
+
+
+
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, 
+                initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dynamic Calendar</title>
+</head>
+
+<body>
+    <!-- Main wrapper for the calendar application -->
+    <div class="wrapper">
+        <div class="container-calendar">
+            <div id="left">
+                <h1>Dynamic Calendar</h1>
+                <div id="event-section">
+                    <h3>Add Event</h3>
+                    <input type="date" id="eventDate">
+                    <input type="text"
+                        id="eventTitle"
+                        placeholder="Event Title">
+                    <input type="text"
+                        id="eventDescription"
+                        placeholder="Event Description">
+                    <button id="addEvent" onclick="addEvent()">
+                        Add
+                    </button>
+                </div>
+                <div id="reminder-section">
+                    <h3>Reminders</h3>
+                    <!-- List to display reminders -->
+                    <ul id="reminderList">
+                        <li data-event-id="1">
+                            <strong>Event Title</strong>
+                            - Event Description on Event Date
+                            <button class="delete-event"
+                                onclick="deleteEvent(1)">
+                                Delete
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="right">
+                <h3 id="monthAndYear"></h3>
+                <div class="button-container-calendar">
+                    <button id="previous"
+                            onclick="previous()">
+                        ‹
+                    </button>
+                    <button id="next"
+                            onclick="next()">
+                        ›
+                    </button>
+                </div>
+                <table class="table-calendar"
+                    id="calendar"
+                    data-lang="en">
+                    <thead id="thead-month"></thead>
+                    <!-- Table body for displaying the calendar -->
+                    <tbody id="calendar-body"></tbody>
+                </table>
+                <div class="footer-container-calendar">
+                    <label for="month">Jump To: </label>
+                    <!-- Dropdowns to select a specific month and year -->
+                    <select id="month" onchange="jump()">
+                        <option value=1>Apr</option>
+                        <option value=2>May</option>
+                        <option value=3>Jun</option>
+                        <option value=4>Sol</option>
+                        <option value=5>Jul</option>
+                        <option value=6>Aug</option>
+                        <option value=7>Sep</option>
+                        <option value=8>Oct</option>
+                        <option value=9>Nov</option>
+                        <option value=10>Dec</option>
+                        <option value=11>Jan</option>
+                        <option value=12>Feb</option>
+                        <option value=13>Mar⁹</option>
+                    </select>
+                    <!-- Dropdown to select a specific year -->
+                    <select id="year" onchange="jump()"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include the JavaScript file for the calendar functionality -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
+<hr />
+
+ <table border='1'  bordercolor='#FFFF00' cellspacing='0' cellpadding='0' align=center>
+<tr><td><table cellspacing='0' cellpadding='0' align=center width='100' border='1'><tr><td  align=center bgcolor='#ffff00'><font size='3' face='Tahoma'> <a href='html_calendar.php?prm=08&chm=-1' rel="nofollow"><</a></font> </td><td colspan=5 align=center bgcolor='#ffff00'><font size='3' face='Tahoma'>Aug 2024 </font> </td><td  align=center bgcolor='#ffff00'><font size='3' face='Tahoma'> <a href='html_calendar.php?prm=08&chm=1' rel="nofollow">></a>  </font></td></tr><tr><td><font size='3' face='Tahoma'><b>Sun</b></font></td><td><font size='3' face='Tahoma'><b>Mon</b></font></td><td><font size='3' face='Tahoma'><b>Tue</b></font></td><td><font size='3' face='Tahoma'><b>Wed</b></font></td><td><font size='3' face='Tahoma'><b>Thu</b></font></td><td><font size='3' face='Tahoma'><b>Fri</b></font></td><td><font size='3' face='Tahoma'><b>Sat</b></font></td></tr><tr><td> </td><td> </td><td> </td><td> </td><td valign=top><font size='2' face='Tahoma'>1  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>2  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>3  
+<br>
+ </font></td></tr><tr><td valign=top><font size='2' face='Tahoma'>4  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>5  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>6  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>7  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>8  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>9  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>10  
+<br>
+ </font></td></tr><tr><td valign=top><font size='2' face='Tahoma'>11  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>12  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>13  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>14  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>15  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>16  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>17  
+<br>
+ </font></td></tr><tr><td valign=top><font size='2' face='Tahoma'>18  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>19  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>20  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>21  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>22  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>23  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>24  
+<br>
+ </font></td></tr><tr><td valign=top><font size='2' face='Tahoma'>25  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>26  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>27  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>28  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>29  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>30  
+<br>
+ </font></td><td valign=top><font size='2' face='Tahoma'>31  
+<br>
+ </font></td></tr><tr></tr></table></td></tr></table>
+ <hr />
+<hr />
